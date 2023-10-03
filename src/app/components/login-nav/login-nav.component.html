@@ -1,0 +1,79 @@
+<!--Menu desplegable-->
+<mat-toolbar>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </mat-menu>
+
+<!--  page title-->
+  <div class="title">
+    <i class="fa-solid fa-wave-square"></i>
+    <span>Hamster</span>
+  </div>
+
+  <span class="example-spacer"></span>
+
+<!--  search-->
+  <div class="container">
+    <div class="row height d-flex justify-content-center align-items-center">
+      <div class="col-md-6">
+        <div class="form">
+          <i class="fa fa-search"></i>
+          <input type="text" class="form-control form-input" placeholder="Buscar..." [(ngModel)]="cadenaBusqueda" (ngModelChange)="buscar()">
+          <span class="left-pan"><i class="fa fa-microphone"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--  contactos-->
+  <button mat-button [matMenuTriggerFor]="beforeMenu">
+    <i class="fa-solid fa-circle-question"></i>
+  </button>
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+    <button mat-menu-item>Ayuda</button>
+    <button mat-menu-item>Contactos</button>
+  </mat-menu>
+
+<!--  menu recordatorio -->
+  <button mat-button [matMenuTriggerFor]="belowMenu">
+    <i class="fa-solid fa-bell"></i>
+  </button>
+  <mat-menu #belowMenu="matMenu" yPosition="below">
+    <button mat-menu-item>Noticias</button>
+    <button mat-menu-item>Foro</button>
+    <button mat-menu-item (click)="openDialog()" >
+      <span>Recordatorio </span>
+    </button>
+  </mat-menu>
+
+
+<!--  user menu-->
+
+  <button mat-button [matMenuTriggerFor]="afterMenu">
+    <i class="fa-solid fa-circle-user"></i>
+  </button>
+  <mat-menu #afterMenu="matMenu" xPosition="after">
+    <button mat-menu-item>Mi perfil</button>
+    <button mat-menu-item>Editar</button>
+    <button mat-menu-item [routerLink]="['home']" >
+      cerrar sesion
+    </button>
+  </mat-menu>
+
+
+
+
+
+
+</mat-toolbar>

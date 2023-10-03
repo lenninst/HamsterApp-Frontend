@@ -1,0 +1,10 @@
+.dashmain {
+  width: 100%;
+}
+.remove-column{
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.remove-column:hover{
+  color: #ed5350;
+}

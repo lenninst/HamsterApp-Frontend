@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="home-content">
+  <p class="home-main-title">Sistema integrado de la Universidad</p>
+  <p class="home-search-title">¿Qué estás buscando?</p>
+
+<div class="search-element-content">
+
+  <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" />
+
+    <i class="fa-solid fa-magnifying-glass"></i>
+
+</div>
+<div class="news-content">
+  <app-noticias></app-noticias>
+</div>
+
+
+  <pre>Model: {{ model | json }}</pre>
+
+
+
+</div>
+

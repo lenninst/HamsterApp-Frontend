@@ -1,0 +1,26 @@
+<div class="navbar-content">
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon"
+            aria-label="Example icon-button with menu icon"
+            [routerLink]="['home']">
+      <i class="fa-solid fa-wave-square"></i>
+    </button>
+    <span>Hamster</span>
+
+    <span class="example-spacer"></span>
+
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+
+<!--nava icons -->
+    </button>
+    <button mat-icon-button class="mat-mdc-tab-header-pagination-controls-enabled" aria-label="Example icon-button with share icon">
+      <i class="fa-solid fa-question"></i>
+    </button >
+
+    <!--  login navbar buttton control -->
+    <button mat-raised-button color="primary" class="login-button"  (click)="redirectToLogin()">
+      Iniciar Sesión
+    </button>
+  </mat-toolbar>
+</div>
+

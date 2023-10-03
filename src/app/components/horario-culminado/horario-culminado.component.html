@@ -1,0 +1,36 @@
+<div class="demo-button-container">
+  <button mat-raised-button (click)="addData()" class="demo-button">
+    Agregar
+  </button>
+  <button
+    mat-raised-button
+    [disabled]="!dataSource.length"
+    (click)="removeData()"
+    class="demo-button">
+    Quitar
+  </button>
+</div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>Aula</th>
+    <td mat-cell *matCellDef="let element">{{element.id}}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="asignatura">
+    <th mat-header-cell *matHeaderCellDef>Asignatura</th>
+    <td mat-cell *matCellDef="let element">{{element.asignatura}}</td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="hora">
+    <th mat-header-cell *matHeaderCellDef>Hora</th>
+    <td mat-cell *matCellDef="let element">{{element.hora}}</td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

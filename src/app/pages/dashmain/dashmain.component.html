@@ -1,0 +1,76 @@
+
+<!--button contend-->
+<div class="demo-button-container">
+
+
+<!--  <button mat-raised-button (click)="addData()" class="demo-button">-->
+<!--    <i class="fa-solid fa-plus"></i>-->
+<!--    Agregar-->
+<!--  </button>-->
+
+  <button mat-raised-button (click)="abrirComponente()">
+    Agregar
+    <i class="fa-solid fa-plus"></i>
+  </button>
+
+
+<!--  <button mat-raised-button (click)="addData()" class="demo-button">-->
+<!--    <i class="fa-solid fa-plus"></i>-->
+<!--    Agregar-->
+<!--  </button>-->
+
+
+
+  <!--tabla-->
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef>No.</th>
+    <td mat-cell *matCellDef="let element">{{element.position}}</td>
+  </ng-container>
+
+  <!-- actividad Column -->
+  <ng-container matColumnDef="actividad">
+    <th mat-header-cell *matHeaderCellDef>actividad</th>
+    <td mat-cell *matCellDef="let element">{{element.actividad}}</td>
+  </ng-container>
+
+  <!-- descripcion Column -->
+  <ng-container matColumnDef="descripcion">
+    <th mat-header-cell *matHeaderCellDef>descripcion</th>
+    <td mat-cell *matCellDef="let element">{{element.descripcion}} </td>
+  </ng-container>
+
+  <!-- fechaVencimientoColumn -->
+  <ng-container matColumnDef="fechaVencimiento">
+    <th mat-header-cell *matHeaderCellDef>fechaVencimiento</th>
+    <td mat-cell *matCellDef="let element">{{element.fechaVencimiento|date:'dd,MM,yyyy'}}</td>
+  </ng-container>
+
+<!--  remove buttonfor container-->
+  <ng-container matColumnDef="accion">
+    <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+    <td mat-cell *matCellDef="let elemento; let i = index;">
+      <button mat-icon-button (click)="removeData(i)" class="remove-column">
+        <i class="fa-solid fa-trash"></i>
+      </button>
+    </td>
+  </ng-container>
+
+  <!--  modify button for container-->
+  <ng-container matColumnDef="accion2">
+    <th mat-header-cell *matHeaderCellDef>Modificar</th>
+    <td mat-cell *matCellDef="let elemento">
+      <button mat-icon-button (click)="modifyData()">
+        <i class="fa-solid fa-sliders"></i>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+
+</div>

@@ -1,0 +1,14 @@
+
+.table-content {
+  width: auto;
+
+}
+
+.mat-elevation-z8 {
+  border-radius: 10px;
+}
+
+tablas-horario-content{
+  display: flex;
+  flex-direction: row;
+}

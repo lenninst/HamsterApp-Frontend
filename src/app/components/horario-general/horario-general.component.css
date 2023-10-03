@@ -1,0 +1,45 @@
+.general-horario-content {
+  width: auto;
+  margin-right: 100px;
+  border-radius: 10px;
+  padding: 20px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 20px #bebebe,
+  -15px -15px 30px #ffffff;
+}
+
+/*tabla responsive horario general */
+
+.responsive-table {
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 600px) {
+
+  .general-horario-content {
+    width: auto;
+  }
+
+  .responsive-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .mat-table {
+    width: 100%;
+  }
+
+  .mat-header-row,
+  .mat-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .mat-cell,
+  .mat-header-cell {
+    flex-basis: 100%;
+    text-align: center;
+    padding: 8px;
+  }
+}

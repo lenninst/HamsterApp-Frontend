@@ -1,0 +1,107 @@
+.horario-content {
+  padding: 35px;
+  background-color: #ebebeb;
+
+
+}
+.tablas-horario-content {
+  display: flex;
+  gap: 30px;
+}
+/*horarios otros */
+.horarioHoy-content {
+  border-radius: 10px;
+  padding: 20px;
+  background: #e0e0e0;
+  box-shadow: 15px 15px 20px #bebebe,
+  -15px -15px 30px #ffffff;
+
+
+}
+
+/*----horario general ---*/
+.section-horarioGeneral {
+  width: auto;
+}
+
+.section-horarioHoy-title {
+  font-weight: bold;
+}
+.section-horarioHoy-subtitle {
+  font-weight: bold;
+}
+
+/*tabla entrar */
+.card-entrar {
+  width: auto;
+  color: #ffffff;
+  padding: 23px 29px ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 59px;
+  border-radius: 5px;
+  background: #1E1E1E;
+}
+
+.section-horarioHoy {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/*entrar button*/
+
+.entrar-button {
+  border-radius: 7px;
+  border: none;
+  background: #1875FF;
+  color: white;
+  font-family: inherit;
+  text-align: center;
+  box-shadow: 0px 14px 56px -11px #1875FF;
+  width: 10em;
+  padding: 1em;
+  transition: all 0.4s;
+  cursor: pointer;
+  height: 36px;
+
+}
+
+.entrar-button span {
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.4s;
+}
+
+.entrar-button span:after {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.7s;
+}
+
+.entrar-button:hover span {
+  padding-right: 3.55em;
+}
+
+.entrar-button:hover span:after {
+  opacity: 4;
+  right: 0;
+}
+
+/*responsive*/
+@media screen and (max-width: 768px) {
+  .tablas-horario-content {
+    flex-direction: column;
+    width: auto;
+
+  }
+  .general-horario-content {
+    width: auto;
+  }
+
+}

@@ -1,0 +1,40 @@
+<div class="horario-content">
+  <div class="tablas-horario-content">
+    <div class="section-horarioHoy">
+      <h1 class="section-horarioHoy-title">Clases de hoy</h1>
+
+      <div class="horarioHoy-content">
+        <h2 class="section-horarioHoy-subtitle">Ahora</h2>
+        <div class="card-entrar">
+          <p>{{asignatura}}</p>
+          <p>{{hora}}</p>
+          <button mat-flat-button color="primary" class="entrar-button" (click)="irAPaginaZoom()">
+            <span><i class="fa-solid fa-video"></i></span>
+            Entrar
+          </button>
+        </div>
+      </div>
+
+      <div class="horarioHoy-content">
+        <h2 class="section-horarioHoy-subtitle">Proxima clase</h2>
+        <app-tabladehorario></app-tabladehorario>
+      </div>
+
+      <div class="horarioHoy-content">
+        <h2 class="section-horarioHoy-subtitle">Clase Culminada</h2>
+        <app-horario-culminado></app-horario-culminado>
+      </div>
+
+    </div>
+<!--    seccion horario general -->
+    <div >
+      <h1 class="section-horarioHoy-title"> Horario General </h1>
+      <div class="section-horarioGeneral">
+        <app-horario-general></app-horario-general>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
